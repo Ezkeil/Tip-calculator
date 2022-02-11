@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 24px;
+  font-family: "Space Mono";
+  --body-bg: hsl(189, 41%, 84%);
+  --card-bg: rgb(255, 255, 255);
+  --card-text: hsl(184, 14%, 56%);
+  --result-bg: hsl(183, 100%, 15%);
+  --input-bg: hsl(189, 41%, 97%);
+}
+
+body {
+  width: 100%;
+  margin: 10% 0 0 0;
+  padding: 0.5rem;
+  background-color: var(--body-bg);
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
+
+label span {
+  visibility: hidden;
+}
+
+input:hover,
+button:hover {
+  cursor: pointer;
+}
+
+input[type="number"] {
+  text-align: right;
+  background-repeat: no-repeat;
+  background-position: 0.3rem center;
+}
+
+#dollar {
+  background-image: url("images/icon-dollar.svg");
+  margin-bottom: 0.7rem;
+
+}
+
+#people {
+  background-image: url("images/icon-person.svg");
+  margin-bottom: 0.7rem;
+
+}
+
+.card {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.7rem;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.7rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+p,
+label {
+  color: var(--card-text);
+  font-size: 0.6rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+input {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  background-color: var(--input-bg);
+}
+
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.button input {
+  width: 6.2rem;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  color: #fff;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: var(--result-bg);
+  width: 6.2rem;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--result-bg);
+  border-radius: inherit;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 1rem;
+}
+
+.result div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result span:first-of-type::after {
+  display: block;
+  content: "/ people";
+  color: var(--card-text);
+}
+
+.result input {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--result-bg);
+  background-color: hsl(172, 67%, 45%);
+  border-radius: inherit;
+}
+
+.attribution {
+  font-size: 0.5rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 376px) {
+  .logo {
+    margin-bottom: 3rem;
+  }
+
+  .card {
+    flex-direction: row;
+    margin: auto;
+    width: fit-content;
+    justify-content: space-evenly;
+  }
+
+  .interface,
+  .result {
+    width: 45%;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

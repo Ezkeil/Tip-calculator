@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img alt src="images\logo.svg" />
+    </div>
+
+    <div class="card">
+      <div class="interface">
+        <label for="bill">Bill<span>Can't be zero</span></label>
+        <input id="dollar" type="number" name="bill" form="myForm" />
+
+        <p>Select Tip %</p>
+        <div class="button">
+          <button value=".05">5%</button>
+          <button value=".1">10%</button>
+          <button value=".15">15%</button>
+          <button value=".25">25%</button>
+          <button value=".5">50%</button>
+          <input type="number" placeholder="Custom" form="myForm" />
+        </div>
+
+        <form id="myForm"></form>
+        <label for="people">Number of People<span>Can't be zero</span></label>
+        <input id="people" type="number" name="people" form="myForm" />
+      </div>
+
+      <div class="result">
+        <div style="flex-direction: column;">
+          <div>
+            <span>Tip Amount</span>
+            <span id="tipAmount"></span>
+          </div>
+          <div>
+            <span>Total</span>
+            <span id="total"></span>
+          </div>
+        </div>
+
+        <input type="reset" form="myForm" />
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
